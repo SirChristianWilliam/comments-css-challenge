@@ -1,0 +1,41 @@
+body {
+    background-color: #f5f6f9;
+    padding:40px;
+ }
+ /* .attribution { font-size: 11px; text-align: center; }
+ .attribution a { color: hsl(228, 45%, 44%); } */
+#mainContainer {
+    width:50%;
+    align-content: center;
+    margin:auto;
+    position: relative;
+}
+.imageContainer, .replyContainer {
+    border:0px solid black;
+    border-radius: 10px;
+    background-color: white;
+     min-height: 100px;
+    max-height: 100px;
+    overflow: scroll;
+    padding: 20px 30px; 
+    float:right;   
+}
+.imageContainer {
+    margin-bottom:20px;
+    width:100%;
+}
+.replyContainer {
+    margin-bottom:20px;;
+    width:90%;
+}
+.likeContainer {
+    background-color: #f5f6f9;
+    float: left;
+    position: relative;
+    width: 32px;
+    height: 76px;
+    transform: translate(-7px, -1px);
+    margin-right: 10px;
+     border: 0px solid black;
+    border-radius: 5px;
+}
