@@ -7,7 +7,7 @@ body {
 #mainContainer {
     width: 75%;
     align-content: center;
-    margin:auto;
+    /* margin:auto; */
     position: relative;
 }
 .imageContainer, .replyContainer {
@@ -16,33 +16,45 @@ body {
     background-color: white;
      /* min-height: 100px;
     max-height: 100px; */
-    height: 120px;
+    /* height: 120px; */
     overflow: scroll;
     padding: 20px 30px; 
     float:right;   
+    height: 115px;
+
 }
 .imageContainer {
     margin-bottom:20px;
-    width:100%;
+    max-width: 650px;
+    /* width:100%; */
     /* padding-bottom: 40px; */
 }
 .replyContainer {
     margin-bottom:20px;;
-    width:90%;
+    max-width: 500px;
+    margin-left: 100px;
+    
 }
+ .line {
+    border-left: 2px solid rgba(149, 145, 145,.5);
+    height: 176px;
+    position: absolute;
+    float: left;
+    transform: translate(-100px, -30px);
+    z-index: 2;
+ }
 .likeContainer {
     background-color: #f5f6f9;
     float: left;
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 32px;
     height: 100px;
     transform: translate(-7px, 0px);
     margin-right: 15px;
-     border: 0px solid black;
+    border: 0px solid black;
     border-radius: 10px;
-    height: 75px;
-
-
+    height: 90px;
 }
 .plusBtn, .minusBtn {
     text-align: center;
@@ -69,6 +81,8 @@ top:40%;
 width:100%;
 text-align: center;
  display: inline-block;
+ color:#5854a4;
+  font-weight: bold;
 }
 img {
     width: 30px;
@@ -82,9 +96,21 @@ img {
 .nameAndWhen {
     display: inline-block;
     padding-bottom:10px;
+    margin-left: 10px;
+
 }
 .messageText {
     line-height: 1.3;
     margin-left: 45px;
-
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.nameAndWhen::first-word {
+    color:blue;
+}
+.whenPostedStyles {
+    color:grey;
+}
+.usernameStyle {
+    font-weight: bold;
 }
