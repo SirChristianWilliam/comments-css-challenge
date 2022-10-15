@@ -5,7 +5,7 @@ body {
  /* .attribution { font-size: 11px; text-align: center; }
  .attribution a { color: hsl(228, 45%, 44%); } */
 #mainContainer {
-    width:50%;
+    width: 75%;
     align-content: center;
     margin:auto;
     position: relative;
@@ -14,8 +14,9 @@ body {
     border:0px solid black;
     border-radius: 10px;
     background-color: white;
-     min-height: 100px;
-    max-height: 100px;
+     /* min-height: 100px;
+    max-height: 100px; */
+    height: 120px;
     overflow: scroll;
     padding: 20px 30px; 
     float:right;   
@@ -23,6 +24,7 @@ body {
 .imageContainer {
     margin-bottom:20px;
     width:100%;
+    /* padding-bottom: 40px; */
 }
 .replyContainer {
     margin-bottom:20px;;
@@ -33,9 +35,56 @@ body {
     float: left;
     position: relative;
     width: 32px;
-    height: 76px;
-    transform: translate(-7px, -1px);
-    margin-right: 10px;
+    height: 100px;
+    transform: translate(-7px, 0px);
+    margin-right: 15px;
      border: 0px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
+    height: 75px;
+
+
+}
+.plusBtn, .minusBtn {
+    text-align: center;
+    width:100%;
+    margin:auto;
+    background-color: none;
+    border:0px solid black;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+.plusBtn {
+    position:absolute;
+    top:0;
+ }
+.minusBtn {
+    position:absolute;
+    bottom:0;
+ 
+}
+.totalLikes {
+position:relative;
+top:40%;
+width:100%;
+text-align: center;
+ display: inline-block;
+}
+img {
+    width: 30px;
+    height: 30px;
+    vertical-align: -10px;
+
+}
+.totalLikes {
+    cursor: default;
+}
+.nameAndWhen {
+    display: inline-block;
+    padding-bottom:10px;
+}
+.messageText {
+    line-height: 1.3;
+    margin-left: 45px;
+
 }
