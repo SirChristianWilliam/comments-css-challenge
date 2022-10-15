@@ -1,39 +1,41 @@
 body {
     background-color: #f5f6f9;
-    padding:40px;
+
+    padding: 40px;
  }
+/* * {
+    border:1px solid red;
+} */
  /* .attribution { font-size: 11px; text-align: center; }
  .attribution a { color: hsl(228, 45%, 44%); } */
 #mainContainer {
     width: 75%;
     align-content: center;
-    /* margin:auto; */
+    margin-left: 20%;
     position: relative;
 }
 .imageContainer, .replyContainer {
-    border:0px solid black;
+    border: 0px solid black;
     border-radius: 10px;
     background-color: white;
-     /* min-height: 100px;
-    max-height: 100px; */
     /* height: 120px; */
     overflow: scroll;
-    padding: 20px 30px; 
-    float:right;   
+    padding: 20px 30px;
+    /* float: right; */
     height: 115px;
-
+    position: relative;
 }
 .imageContainer {
-    margin-bottom:20px;
+    margin-bottom: 20px;
     max-width: 650px;
-    /* width:100%; */
-    /* padding-bottom: 40px; */
+    /* width: 100%; */
+    /* padding-bottom: 40px;*/
 }
 .replyContainer {
-    margin-bottom:20px;;
-    max-width: 500px;
-    margin-left: 100px;
-    
+    margin-bottom: 20px;
+    max-width: 588px;
+    margin-left: 62px;
+    min-width: 124px;
 }
  .line {
     border-left: 2px solid rgba(149, 145, 145,.5);
@@ -64,16 +66,17 @@ body {
     border:0px solid black;
     background-color: transparent;
     cursor: pointer;
-
+    color: hsl(237deg 42% 52%);
+    font-weight: bold;
 }
 .plusBtn {
     position:absolute;
-    top:0;
+    top: 7px;
  }
 .minusBtn {
     position:absolute;
-    bottom:0;
- 
+    bottom: 7px;
+    letter-spacing: -1px;
 }
 .totalLikes {
 position:relative;
@@ -84,7 +87,7 @@ text-align: center;
  color:#5854a4;
   font-weight: bold;
 }
-img {
+.mainImages {
     width: 30px;
     height: 30px;
     vertical-align: -10px;
@@ -104,13 +107,80 @@ img {
     margin-left: 45px;
     padding-bottom: 5px;
     padding-top: 10px;
+    font-size:16px;
+    font-family: 'Rubik', sans-serif;
+    color: hsl(211, 10%, 45%);
 }
-.nameAndWhen::first-word {
-    color:blue;
-}
+
 .whenPostedStyles {
     color:grey;
 }
 .usernameStyle {
     font-weight: bold;
+    
 }
+.replyBtn {
+    float: right;
+}
+#me {
+border: 0px solid black;
+    border-radius: 50%;
+}
+.delAndEdit{
+    float:right;
+}
+.editText,.delText {
+    display:inline;
+    padding-left:5px;
+}
+.delText {
+    color:#ED6368;
+}
+.mentions {
+    color: hsl(237deg 42% 52%);
+    font-weight: bold;
+}
+.delBtn, .editBtn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+#meBigger {
+    width: 40px;
+    height: 40px;
+    vertical-align: -10px;
+    border:0px solid black;
+    border-radius: 50%;
+    float:left;
+    margin-left: -10px;
+
+}
+#addCommentBox {
+    width:100%;
+    text-align: center;
+    
+}
+#addComment {
+    padding: 10px 15px;
+    width: 65%;
+    margin-right: 50px;
+    height: 58px;
+    border: 1px solid grey;
+    border-radius: 5px;
+ }
+ #send {
+    float: right; 
+    position: absolute;
+    /* top: 1px; */
+    /* right: 41px; */
+    /* margin-right: 200px; */
+    transform: translate(-42px, 1px);
+    margin-top: -54px;
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: #5557b5;
+    padding: 13px 23px;
+    width: 85px;
+    margin-right: -4px;
+    margin-top: -1px;
+ }
