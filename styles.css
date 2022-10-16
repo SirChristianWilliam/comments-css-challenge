@@ -1,8 +1,7 @@
 body {
     background-color: #f5f6f9;
     padding-top: 20px;
-
-    width: 90%;
+     width: 90%;
  }
 * {
 
@@ -20,7 +19,7 @@ body {
     position: relative;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 40px 0px 40px 10px;
+    padding: 25px 0px 40px 10px;
 }
 .imageContainer, .replyContainer {
     border: 0px solid black;
@@ -49,7 +48,7 @@ body {
 
  }
  .line {
-    border-left: 2px solid  rgba(149, 145, 145,.5);
+    border-left: 2px solid hsl(223, 19%, 93%);
     height: 176px;
     position: absolute;
     transform: translate(-100px, -30px);
@@ -141,7 +140,10 @@ text-align: center;
     border: none;
     color: hsl(237deg 42% 52%);
     font-weight: bold;
-    cursor: pointer;}
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: .2s;
+}
 #me {
 border: 0px solid black;
     border-radius: 50%;
@@ -167,6 +169,8 @@ border: 0px solid black;
     border: none;
     background: transparent;
     cursor: pointer;
+    transition-property: transform;
+    transition-duration: .2s;
 }
 #meBigger {
     width: 40px;
@@ -188,9 +192,15 @@ border: 0px solid black;
     height: 58px;
     margin-top: -39px;
     margin-left: 37px;
-    border: 1px solid grey;
+    border: 1px solid hsl(223, 19%, 93%);
     border-radius: 5px;
     resize:none;
+    font-family: 'Rubik', sans-serif;
+ }
+ #addComment:focus {
+    border: 1px solid hsl(240deg 16% 43%);
+    outline: none;
+
  }
  #send {
     border: 0px solid black;
@@ -211,14 +221,15 @@ border: 0px solid black;
  .textAreaContainer {
     width:100%;
     margin-left: 40px;
+ 
 
  }
  @media screen and (max-width:660px) {
-     .delBtn {
+     .editBtn {
         margin-top: 13px;
 
      }
-    .editBtn {
+    .delBtn {
         display: block;
         margin-bottom:10px;
     }
@@ -244,6 +255,7 @@ border: 0px solid black;
     }
     #addComment {
         padding: 10px 10px;
+
     }
     #editIcon, #delIcon {
     margin-left: 25px;
@@ -275,7 +287,7 @@ border: 0px solid black;
         font-size: 13px;
     }
     .imageContainer {
-        width: 80%;
+        width: 82%;
 
     }
     .replyContainer{
@@ -292,8 +304,54 @@ border: 0px solid black;
     border: 1px solid black;
     background-color: #5557b5;
     color: white;
-    padding: 1px 4px;
+    padding: 0px 5px;
+    text-align: center;
     font-size: 15px;
     margin-left: -3px;
     margin-right: 11px;
 }
+#meContainer {
+border: 0px solid black;
+border-radius: 10px;
+background-color: white;
+overflow: scroll;
+padding: 20px 30px 0px 30px;
+height: 115px;
+margin-bottom: 20px;
+max-width: 650px;
+}
+
+ #send:hover {
+    background-color:hsl(239, 57%, 85%);
+
+}
+ 
+.replyBtn:hover, .editBtn:hover, .delBtn:hover{
+    /* color:hsl(239, 57%, 85%); */
+    opacity:.5;
+}
+.replyBtn:active, .editBtn:active, .delBtn:active {
+    transform: rotate(180deg);
+    opacity:1;
+}
+.plusBtn:hover, .minusBtn:hover {
+   color: hsl(237deg 42% 52%);
+}
+.plusBtn:active {
+    font-size: 25px;
+    margin-top: -5px;
+}
+.minusBtn:active {
+    font-size: 25px;
+    margin-bottom: -5px;
+
+
+}
+
+#send:active {
+    background-color: white;
+    opacity:1;
+    color:black;
+    outline:1px solid black;
+}
+ 
