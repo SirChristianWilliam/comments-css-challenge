@@ -139,7 +139,8 @@ text-align: center;
     float: right;
     background: none;
     border: none;
-
+    color: hsl(237deg 42% 52%);
+    font-weight: bold;
     cursor: pointer;}
 #me {
 border: 0px solid black;
@@ -212,6 +213,25 @@ border: 0px solid black;
     margin-left: 40px;
 
  }
+ @media screen and (max-width:660px) {
+     .delBtn {
+        margin-top: 13px;
+
+     }
+    .editBtn {
+        display: block;
+        margin-bottom:10px;
+    }
+    .delAndEdit {
+        display: block;
+
+        margin-top: -7px;
+        margin-right: -33px;
+    }
+
+ }
+
+
  @media screen and (max-width:600px) {
 
     .replyBtn {
@@ -225,24 +245,31 @@ border: 0px solid black;
     #addComment {
         padding: 10px 10px;
     }
-     
+    #editIcon, #delIcon {
+    margin-left: 25px;
+
+    }
  
  }
  @media screen and (max-width:600px) {
     
     .delBtn {
         display: block;
-        
+
     }
     .editBtn {
         display: block;
         margin-bottom:10px;
+        font-size: 12px;
+ 
+
     }
     .delAndEdit {
-        display: block;
+         margin-left: -35px;
+         margin-top: -7px; 
+            height: 0px;
 
-        margin-top: -7px;
-        margin-right: -33px;
+        /* margin-right: -33px; */
     }
     .usernameStyle, .whenPostedStyles, .messageText, .totalLikes, .replyBtn, .delAndEdit{
         font-size: 13px;
@@ -259,4 +286,14 @@ border: 0px solid black;
         padding: 13px 16px;
         margin-right: -25px;
     }
+}
+
+#you {
+    border: 1px solid black;
+    background-color: #5557b5;
+    color: white;
+    padding: 1px 4px;
+    font-size: 15px;
+    margin-left: -3px;
+    margin-right: 11px;
 }
