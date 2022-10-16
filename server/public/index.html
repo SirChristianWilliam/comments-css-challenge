@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+<!-- Fonts from google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<script src="jquery.js"></script>
+<script src="client.js"></script>
+<title>CSS Challenge | Interactive comments section</title>
+
+</head>
+
+<body>
+  <!-- Comment #1 -->
+  <main id="mainContainer">
+    <div class="imageContainer">
+      <button class="replyBtn">
+        <svg class="svg" width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" fill="#5357B6"/></svg>
+         &nbsp  Reply
+      </button>
+      <div class="likeContainer">
+        <button class="plusBtn">+</button>
+        <button class="minusBtn">--</button>
+        <span class="totalLikes">12</span>
+      </div>
+      <img src="./images/avatars/image-amyrobson.png" class="mainImages" alt="profile" />
+      <div class="nameAndWhen">
+        <span class="usernameStyle">amyrobson</span> &nbsp 
+        <span class="whenPostedStyles">1 month ago</span>
+      </div>
+      <br>
+      <div class="messageText">
+        Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+      </div>
+    </div>
+  <!-- Comment #2 -->
+    <div class="imageContainer">
+      <button class="replyBtn">
+        <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" fill="#5357B6"/></svg>
+        &nbsp Reply
+      </button>
+      <div class="likeContainer">
+        <button class="plusBtn">+</button>
+        <button class="minusBtn">--</button>
+        <span class="totalLikes">5</span>
+      </div>
+      <img src="./images/avatars/image-maxblagun.png" class="mainImages" alt="profile" />
+      <div class="nameAndWhen">
+        <span class="usernameStyle">maxblagun</span>&nbsp 
+        <span class="whenPostedStyles">2 weeks ago</span>
+      </div>
+      <br>
+      <div class="messageText">
+        Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+      </div>
+    </div>
+  <!-- Comment #3 (Reply to comment #2) -->
+    <div class="replyContainer">
+      <button class="replyBtn">
+        <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" fill="#5357B6"/></svg>
+        &nbsp Reply
+      </button>
+      <span class="line"></span>
+        <div class="likeContainer">
+          <button class="plusBtn">+</button>
+          <button class="minusBtn">--</button>
+          <span class="totalLikes">4</span>
+        </div>
+        <img src="./images/avatars/image-ramsesmiron.png" class="mainImages" alt="profile" />
+      <div class="nameAndWhen">
+        <span class="usernameStyle">ramsesmiron</span>&nbsp  
+        <span class="whenPostedStyles">1 week ago</span>
+      </div>
+      <br>
+      <div class="messageText">
+      <span class="mentions"> @maxblagun  </span> If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
+      </div>
+    </div>
+  <!-- Comment #4 (Reply to comment #2) -->
+    <div class="replyContainer">
+      <span class="line"></span>
+        <div class="likeContainer">
+          <button class="plusBtn">+</button>
+          <button class="minusBtn">--</button>
+          <span class="totalLikes">2</span>
+        </div>
+        <img src="images/Code Master.jpeg" alt="profile" class="mainImages" id="me" />
+        <span class="delAndEdit">
+          <button class="delBtn">
+            <svg width="12" height="14" id="delIcon" xmlns="http://www.w3.org/2000/svg"><path d="M1.167 12.448c0 .854.7 1.552 1.555 1.552h6.222c.856 0 1.556-.698 1.556-1.552V3.5H1.167v8.948Zm10.5-11.281H8.75L7.773 0h-3.88l-.976 1.167H0v1.166h11.667V1.167Z" fill="#ED6368"/></svg>    
+            <p class="delText">  Delete &nbsp </p>
+          </button>
+          <button class="editBtn">
+            <svg width="14" height="14" id="editIcon" xmlns="http://www.w3.org/2000/svg"><path d="M13.479 2.872 11.08.474a1.75 1.75 0 0 0-2.327-.06L.879 8.287a1.75 1.75 0 0 0-.5 1.06l-.375 3.648a.875.875 0 0 0 .875.954h.078l3.65-.333c.399-.04.773-.216 1.058-.499l7.875-7.875a1.68 1.68 0 0 0-.061-2.371Zm-2.975 2.923L8.159 3.449 9.865 1.7l2.389 2.39-1.75 1.706Z" fill="#5357B6"/></svg>
+            <p class="editText">  Edit</p>
+          </button>
+        </span>
+        <div class="nameAndWhen">  
+          <span class="usernameStyle">chrismahkey &nbsp </span><span id="you">you</span>
+          <span class="whenPostedStyles">2 days ago</span>
+        </div>
+        <br>
+        <div class="messageText">
+          <span class="mentions">@ramsesmiron </span> On G📀D that shit be bussin'💯. You spittin' straight facts homie ♿️ no cap 🔥. Hey yo can you check out my Soundcloud tho??🙏🙌🙏 👀
+        </div>
+    </div>
+<!-- Comment Container -->
+    <div id="meContainer">
+      <img src="images/Code Master.jpeg" alt="profile" id="meBigger" />
+        <div id="addCommentBox">
+        </div>
+        <div id="sendContainer">
+        </div>
+          <div id="textAreaContainer">
+            <textarea id="addComment" placeholder="  Add a comment..."></textarea>
+            <button id="send">SEND</button>
+          </div>
+        </div>
+  </main>
+<!-- 
+  <div class="attribution">
+    Challenge adapted from <a href="https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

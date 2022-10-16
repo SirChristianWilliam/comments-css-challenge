@@ -1,0 +1,25 @@
+{
+  "name": "comments-css-challenge",
+  "version": "1.0.0",
+  "description": "Your challenge is to build out this comments section in HTML and CSS and get it looking as close to the design as possible:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirChristianWilliam/comments-css-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirChristianWilliam/comments-css-challenge/issues"
+  },
+  "homepage": "https://github.com/SirChristianWilliam/comments-css-challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2"
+  }
+}
