@@ -1,7 +1,7 @@
 body {
     background-color: #f5f6f9;
-    /* margin: 50px;
-    padding: 40px; */
+    padding-top: 20px;
+
     width: 90%;
  }
 /* * {
@@ -122,11 +122,15 @@ text-align: center;
 }
 .usernameStyle {
     font-weight: bold;
+    cursor:pointer;
     
 }
 .replyBtn {
     float: right;
-}
+    background: none;
+    border: none;
+
+    cursor: pointer;}
 #me {
 border: 0px solid black;
     border-radius: 50%;
@@ -146,6 +150,7 @@ border: 0px solid black;
 .mentions {
     color: hsl(237deg 42% 52%);
     font-weight: bold;
+    cursor:pointer;
 }
 .delBtn, .editBtn {
     border: none;
@@ -166,7 +171,7 @@ border: 0px solid black;
     
 }
 #addComment {
-    padding: 10px 15px;
+    padding: 10px 0px;
     width: 70%;
     margin-right: 95px;
     height: 58px;
@@ -177,13 +182,13 @@ border: 0px solid black;
     resize:none;
  }
  #send {
-    position: absolute;
-    right: 15px;
     border: 0px solid black;
     border-radius: 10px;
     background-color: #5557b5;
+    float: right;
     padding: 13px 23px;
-     margin-top: -40px;
+    margin-top: -84px;
+    margin-right: -15px;
     cursor: pointer;
     color: white;
  }
@@ -197,60 +202,31 @@ border: 0px solid black;
     margin-left: 40px;
 
  }
-/* 
- @media screen and (max-width:850px) {
-    body {
-        margin:50px 0px;
-        width:40%;
-    }
-    .replyBtn, .whenPostedStyles, .usernameStyle, .messageText {
-        font-size: 15px;
-    }
-    #mainContainer {
-        margin-left: 120px;
+ @media screen and (max-width:575px) {
 
-     }
-    .likeContainer {
-        width: 23px;
-        height: 85px;
+    .delBtn {
+        display: block;
+        
     }
-    .imageContainer {
-        width:100%;
-        height: 80px;
+    .editBtn {
+        display: block;
+        margin-bottom:10px;
+    }
+    .delAndEdit {
+        display: block;
 
-     }
-    .replyContainer {
-        width:100%;
-        height: 80px;
+        margin-top: -7px;
+        margin-right: -33px;
+    }
+    .replyBtn {
+        margin-right: -17px;
 
-     }
-
- } */
-
-/* 
- @media screen and (max-width:715px) {
-    body {
-        margin:50px 0px;
-        width:40%;
     }
-    .replyBtn, .whenPostedStyles, .usernameStyle, .messageText {
-        font-size: 15px;
+    /* #send {
+        padding: 9px 18px;
+        margin-right: -15px;
+    } */
+    #addComment {
+        padding: 10px 0px;
     }
-    #mainContainer {
- 
-        margin-left:0px;
-    }
-    .likeContainer {
-        width: 23px;
-        height: 85px;
-    }
-    .imageContainer {
-         min-width: 365px;
-       
-        }
-    .replyContainer {
-      
-        min-width: 305px;
-    }
-
- } */
+ }
