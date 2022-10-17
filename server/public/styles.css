@@ -55,6 +55,11 @@ body {
     margin-bottom: 20px;
     max-width: 650px;
 }
+img {
+    border:0px solid black;
+    border-radius: 50%;
+
+}
 .line:last-of-type{
     transform: translate(-100px, -20px);
     height: 165px;
