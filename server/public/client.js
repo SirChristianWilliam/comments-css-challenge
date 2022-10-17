@@ -2,12 +2,12 @@ $(document).ready(onReady)
 
 function onReady() {
     console.log("Jquery and JS ready");
-    getCurrent();
+    showNewVotes();
     $('#send').on('click',addComment);
     $('.replyBtn').on('click',openReplyBox);
     $('.delBtn').on('click',deletePost);
     $('.editBtn').on('click',openEditBox);
-    $('.likeContainer').on('click','.plusBtn',addCount);
+    $('.plusBtn').on('click',addCount);
     $('.likeContainer').on('click','.minusBtn',minusCount);
 }
 function addComment() {
@@ -25,56 +25,68 @@ function deletePost() {
 function openEditBox() {
     console.log("Edit button clicked");
 }
-
-function getCurrent() {
-    console.log("in getCurrent()");
+function render(array) {
+    console.log("in render");
+    console.log(array);
+    console.log(array[0],"HHHHH")
+    $('#comOneVote').text(array[array.length-1].vote1);
+    $('#comTwoVote').text(array[array.length-1].vote2);
+    $('#comThreeVote').text(array[array.length-1].vote3);
+    $('#comFourVote').text(array[array.length-1].vote4);
+}
+function showNewVotes() {
+    console.log("in loadOn");
     $.ajax({
-        url:'/display',
+        url: 'display',
         method: 'GET'
     })
     .then((response) => {
-        console.log(response,"Response in GET from server");
+        console.log("in get response,",response);
         render(response);
     })
     .catch((err) => {
-        console.log('GET error',err);
+        console.log('GET error,',err)
     })
 }
-function render(array) {
-    console.log(array, "in Render function");
-    $('.totalLikes').text(array);
-
-}
-function addCount() {
-    console.log("Plus btn clicked");
-    console.log($(this).parent().children().next().next().text());
-    let currentNumber = Number($(this).parent().children().next().next().text())+1;
-    console.log($(this),"HARRRRR");
-   console.log($(this).data('id'),"THE IDIDDIDID");
-
+function addCount(evt) {
+    evt.preventDefault();
+    let comOne = Number($(this).parent().children().next().next().text());
+    let addit = (comOne+=1);
+    Number($(this).parent().children().next().next().text(addit));
+    let newObj = {
+        voteOne: $('#comOneVote').text(),
+        voteTwo: $('#comTwoVote').text(),
+        voteThree: $('#comThreeVote').text(),
+        voteFour: $('#comFourVote').text()
+    }
     $.ajax({
-        method: 'PUT',
-        url: `/display`,
-        data: {currentNumber: currentNumber},
+        url: '/display',
+        method: 'POST',
+        data:newObj
     })
-    .then(function (response) {
-        getCurrent();
-        console.log('err on PUT ready state',response);
-    })  
-}
-
-function minusCount() {
-    console.log("Plus btn clicked");
-    console.log($(this).parent().children().next().next().text());
-    let currentNumber = Number($(this).parent().children().next().next().text())-1;
-
+    .then((response) => {
+        console.log('In POST');
+        showNewVotes();
+    })
+ }
+function minusCount(evt) {
+    evt.preventDefault();
+    let comOne = Number($(this).parent().children().next().next().text());
+    let addit = (comOne-=1);
+    Number($(this).parent().children().next().next().text(addit));
+    let newObj = {
+        voteOne: $('#comOneVote').text(),
+        voteTwo: $('#comTwoVote').text(),
+        voteThree: $('#comThreeVote').text(),
+        voteFour: $('#comFourVote').text()
+    }
     $.ajax({
-        method: 'PUT',
-        url: `/display`,
-        data: {currentNumber: currentNumber},
+        url: '/display',
+        method: 'POST',
+        data:newObj
     })
-    .then(function (response) {
-        getCurrent();
-        console.log('err on PUT ready state',response);
-    })  
+    .then((response) => {
+        console.log('In POST');
+        showNewVotes();
+    })
 }

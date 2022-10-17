@@ -9,16 +9,19 @@ app.listen(port, () => {
     console.log("Show this message when the server is active");
 });
 //let content = [];
-let voteNumbers = [0];
+let voteArray = [];
 app.get('/display', (req,res) => {
-    console.log("GET in server");
-     res.send(voteNumbers);
+    console.log('in server GET',voteArray);
+    res.send(voteArray);
 })
-
-app.put('/display', (req,res) => {
-    console.log("PUT in server",res);
-    let updatedVote = Number(req.body.currentNumber);
-    voteNumbers.pop();
-    voteNumbers.push(updatedVote);
+app.post('/display', (req,res) => {
+    console.log("in POST",req.body);
+    let serverObj = {
+        vote1: req.body.voteOne,
+        vote2: req.body.voteTwo,
+        vote3: req.body.voteThree,
+        vote4: req.body.voteFour
+    }
+    voteArray.push(serverObj);
     res.sendStatus(201);
 })
